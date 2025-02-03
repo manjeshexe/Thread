@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate",
-    "vercel-build": "prisma generate && prisma db push && next build"
+    "postinstall": "prisma generate && prisam db push"
   },
   "prisma": {
     "version": "latest",
@@ -19,7 +18,7 @@
   "dependencies": {
     "@auth/mongodb-adapter": "^2.0.0",
     "@auth/prisma-adapter": "^1.0.2",
-    "@prisma/client": "^5.3.1",
+    "@prisma/client": "^6.3.0",
     "@radix-ui/react-alert-dialog": "1.0.4",
     "@radix-ui/react-avatar": "1.0.4",
     "@radix-ui/react-dialog": "1.0.4",
@@ -73,7 +72,7 @@
     "@types/formidable": "^3.4.3",
     "@types/multer": "^1.4.8",
     "@types/react": "^18.2.45",
-    "prisma": "^5.3.1"
+    "prisma": "^6.3.0"
   },
   "resolutions": {
     "csstype": "^3.0.10"
