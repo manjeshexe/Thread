@@ -128,18 +128,18 @@ export const authOptions: AuthOptions = {
   session: {
     strategy: "jwt",
   },
-  cookies: {
-    sessionToken: {
-      name: `__Secure-next-auth.session-token`,
-      options: {
-        httpOnly: true,
-        sameSite: "lax", // or "none" if cross-site
-        path: "/",
-        secure: true, // Required for HTTPS
-        domain: process.env.NEXT_PUBLIC_DB_HOST, // Include subdomains if needed
-      },
-    },
-  },
+  // cookies: {
+  //   sessionToken: {
+  //     name: `__Secure-next-auth.session-token`,
+  //     options: {
+  //       httpOnly: true,
+  //       sameSite: "lax", // or "none" if cross-site
+  //       path: "/",
+  //       secure: true, // Required for HTTPS
+  //       domain: process.env.NEXT_PUBLIC_DB_HOST, // Include subdomains if needed
+  //     },
+  //   },
+  // },
   jwt: {
     secret: process.env.NEXTAUTH_JWT_SECRET,
   },
