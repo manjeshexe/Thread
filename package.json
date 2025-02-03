@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate && prisam db push"
+    "postinstall": "prisma generate && prisma db push"
   },
   "prisma": {
     "version": "latest",
