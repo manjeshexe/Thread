@@ -15,7 +15,9 @@ export default function MainLayout({
   return (
     <div>
       {session && pathname !== "/login" ? <Header /> : null}
-      <div className="w-screen max-w-xl mx-auto px-4 md:px-0">{children}</div>
+      <div className="w-full md:w-screen md:max-w-xl mx-auto px-4 md:px-0">
+        {children}
+      </div>
     </div>
   );
 }

@@ -31,6 +31,8 @@ export default function Header({ backArrow, currentUser }: Props) {
       className={`
         flex 
         w-full
+        px-4
+        md:px-0
         lg:w-2/3
         justify-between 
         items-center 

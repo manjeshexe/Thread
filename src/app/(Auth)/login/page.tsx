@@ -114,7 +114,7 @@ export default function Page() {
   };
 
   return (
-    <div className="w-11/12 min-h-screen mx-auto relative flex justify-center items-center ">
+    <div className="md:w-11/12 min-h-screen mx-auto relative flex justify-center items-center ">
       <div className="fixed top-0 w-[1900px] h-[400px] object-cover">
         <Image
           className="absolute top-0 left-0 object-cover"
@@ -124,9 +124,9 @@ export default function Page() {
           height={400}
         />
       </div>
-      <div className="flex flex-col z-50">
+      <div className="flex items-center justify-center flex-col z-50 w-full h-full">
         <div
-          className="w-96 flex flex-col z-50 space-y-2"
+          className="w-72 md:w-96 flex h-full flex-col z-50 space-y-2 px-4"
           // action={loginAction}
         >
           <input

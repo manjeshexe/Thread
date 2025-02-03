@@ -54,10 +54,13 @@ export default async function RootLayout({ children }: rootLayoutProps) {
             <ClientComponent>
               {session ? <Header currentUser={session} /> : null}
 
-              <div className="w-screen max-w-xl mx-auto px-4 md:px-0">
+              <div className="w-screen max-w-xl mx-auto px-6 md:px-0">
                 {children}
               </div>
-              <Footer image={session?.image!} username={session?.username!} />
+
+              {session && (
+                <Footer image={session?.image!} username={session?.username!} />
+              )}
             </ClientComponent>
             <SpeedInsights />
           </ThemeProviders>

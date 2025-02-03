@@ -99,7 +99,7 @@ export default function ImagePreview({ imageData }: imagePreviewProps) {
     <AnimatePresence initial={false} custom={direction}>
       <motion.div
         ref={fullscreenRef}
-        className={` flex relative h-[500px] w-full sm:w-[320px] rounded-lg  object-cover max-w-80 overflow-hidden`}
+        className={` flex relative h-[320px] md:h-[500px] w-[250px] sm:w-[320px] rounded-lg  object-cover md:max-w-80 overflow-hidden`}
       >
         <motion.img
           placeholder="blur"

@@ -31,7 +31,7 @@ export default async function Layout({ children, params }: Props) {
     return txt.slice(8);
   }
   return (
-    <div className="w-screen max-w-xl mx-auto px-4 md:px-0">
+    <div className="w-full md:w-screen max-w-xl mx-auto md:px-0">
       <div className="flex justify-between items-center py-4">
         <div className="flex flex-col items-start justify-center ">
           <h1 className="text-xl font-bold">{user?.name}</h1>
@@ -50,17 +50,19 @@ export default async function Layout({ children, params }: Props) {
       <p className="flex my-4 text-base">{user?.bio!}</p>
       <div className="flex justify-between items-center">
         <div className="text-md flex flex-row space-x-2 font-light text-gray-900 dark:text-zinc-300">
-          {user?.followedBy && (
-            <div
-              key={lastProfile?.id}
-              className="rounded-full flex justify-center items-center "
-            >
-              <AvatarCn source={lastProfile?.image!} width="5" height="5" />
-            </div>
+          {user?.followedBy != null && (
+            <>
+              <div
+                key={lastProfile?.id}
+                className="rounded-full flex justify-center items-center "
+              >
+                <AvatarCn source={lastProfile?.image!} width="5" height="5" />
+              </div>
+              <p className="hover:underline dark:text-zinc-300  cursor-pointer">
+                {user?.followedBy.length} followers
+              </p>
+            </>
           )}
-          <p className="hover:underline dark:text-zinc-300  cursor-pointer">
-            {user?.followedBy.length} followers
-          </p>
 
           {user?.socials?.url! && (
             <span>&#xB7; {trimTxt(user?.socials?.url!)}</span>
